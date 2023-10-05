@@ -1,4 +1,10 @@
 # learn_programing
+### Integrantes do grupo
+
+- DANIEL NEVES BRASILEIRO COSTA SILVEIRA
+- VITOR ROSENBERGRE DOS SANTOS CARMO
+- RAMAN MELO CAVALCANTE
+- GILSON RUY MONTEIRO TEIXEIRA 
 
 ### protótipo do projeto 
 
