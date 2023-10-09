@@ -5,12 +5,10 @@
 - VITOR ROSENBERGRE DOS SANTOS CARMO
 - RAMAN MELO CAVALCANTE
 - GILSON RUY MONTEIRO TEIXEIRA 
---
+---
+
 Bem-vindo ao nosso emocionante projeto! Nosso objetivo é criar uma plataforma inovadora que tornará o aprendizado de linguagens de programação uma experiência acessível e empolgante. Estamos comprometidos em proporcionar a você uma maneira eficaz e envolvente de dominar as complexidades das linguagens de programação.
-
-Nossa plataforma oferecerá uma jornada de aprendizado rica em recursos, com ferramentas interativas, tutoriais abrangentes e uma comunidade ativa de aprendizes. Com a nossa ajuda, você estará no caminho certo para se tornar um programador habilidoso em pouco tempo.
-
-Junte-se a nós nesta emocionante jornada de aprendizado e prepare-se para explorar o mundo da programação de forma atraente e eficaz!
+Nossa plataforma oferecerá uma jornada de aprendizado rica em recursos, com ferramentas interativas, tutoriais abrangentes e uma comunidade ativa. Com a nossa ajuda, o usuário estará no caminho certo para se tornar um programador habilidoso em pouco tempo.
 
 ### protótipo do projeto 
 
