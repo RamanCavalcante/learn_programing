@@ -17,3 +17,6 @@ Nossa plataforma oferecerá uma jornada de aprendizado rica em recursos, com fer
 ![image](https://github.com/RamanCavalcante/learn_programing/assets/31856676/82aa325b-ce5d-405d-b268-18c370e3969e)
 
 https://www.figma.com/file/mey8o3tFfH2JD4hM9dpWc0/School-Solved---simple%C2%A0html%C2%A0template-code-for-school-(Community)?type=design&node-id=2415%3A26437&mode=design&t=Vm2l383sHWQVVMaX-1
+
+Aqui está a documentação inicial do projeto
+https://docs.google.com/document/d/1UokQY69LGSx7Zbh8WnKXjTePLwG520vXCjYxo9uKnuQ/edit?usp=sharing
