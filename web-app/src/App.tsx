@@ -1,14 +1,23 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
+import ReactDOM from 'react-dom/client';
+import { Routes, Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import ActivitiesPage from './pages/ActivitiesPage/ActivitiesPage';
+import HomePage from './pages/HomePage/HomePage';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>TESte</h2>
-      </header>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/activities" element={<ActivitiesPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<App />);
+}
