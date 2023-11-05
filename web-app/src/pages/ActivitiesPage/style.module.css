@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  height: 100vh; /* Define a altura para 100% da altura da janela */
+  width: 100vw;  /* Define a largura para 100% da largura da janela */
+  background-color: blue;
+}
+
+.content_main {
+  background-color: #282836;
+  width: 100%;
+} 
+
+.side_bar {
+  background-color: #14151C;
+  width: 25%;
+  height: 100%;
+}
+
+.top_side_bar {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  height: 4%;
+}
+
+
+.top_side_bar > button {
+  width: 38px;
+  height: 38px;
+  border-radius: 0.5rem;
+}
