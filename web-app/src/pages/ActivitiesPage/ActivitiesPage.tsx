@@ -61,7 +61,7 @@ const ActivitiesPage = () => {
       </div>
       <div className={style.content_main}>
         <div className={style.content_tile}>{currentLesson?.title}</div>
-        <div className={style.content_content}>{currentLesson?.content}</div>
+        <div className={style.content_lesson}>{currentLesson?.content}</div>
       </div>
     </div>
   );

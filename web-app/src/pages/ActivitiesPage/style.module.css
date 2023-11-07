@@ -9,6 +9,7 @@
   width: 80%;
   max-height: 100vh;
   overflow-y: scroll;
+  color: #fafafa;
 } 
 
 .side_bar {
