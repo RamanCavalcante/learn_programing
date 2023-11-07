@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Introdução",
+    "status": false,
+    "content": "Java, uma linguagem de programação orientada a objetos, é uma escolha dominante para o desenvolvimento de aplicativos web e móveis em muitas empresas. Ela nasceu em 1995 na Sun Microsystems, liderada por James Gosling, carinhosamente chamado de 'pai do Java'. Em 2008, a Oracle adquiriu a linguagem, desencadeando um notável crescimento no mercado de tecnologia."
+  },
+  {
+    "title": "Tipos Básicos",
+    "status": false,
+    "content": "Java é uma linguagem de programação de tipagem estática, o que significa que o tipo de uma variável é conhecido em tempo de compilação. Atribuir um valor a um nome é referido como definir uma variável. Uma variável é definida especificando explicitamente seu tipo. "
+  }
+]

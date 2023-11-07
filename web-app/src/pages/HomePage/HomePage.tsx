@@ -16,7 +16,7 @@ function HomePage() {
               <Link to="/activities" replace={true}>
                 <h2>START</h2>
               </Link>
-              <Link to="/activities" replace={true}>
+              <Link to="/about" replace={true}>
                 <h2>ABOUT</h2>
               </Link>
               <Link to="/activities" replace={true}>
