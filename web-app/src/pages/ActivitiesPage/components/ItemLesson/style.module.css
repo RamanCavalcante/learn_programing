@@ -1,0 +1,24 @@
+
+.content_item {
+  padding: 0.2rem;
+  padding-left: 0.7rem;
+  display: flex;
+  align-items: center;
+  background-color: #21222C;
+  height: 90%;
+  gap: 0.7rem;
+}
+
+.check_item {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  background-color: #8CFCA4;
+  border-radius: 50%;
+}
+
+.name_lesson {
+  color: #ffffff;
+  font-weight: bolder;
+}

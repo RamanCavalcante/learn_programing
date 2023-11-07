@@ -1,14 +1,14 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
+import ReactDOM from 'react-dom/client';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h2>TESte</h2>
-      </header>
-    </div>
-  )
+import Routes from './routes/Routes';
+
+export default function App() {
+  return <Routes />;
 }
-
-export default App
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(<App />);
+}
