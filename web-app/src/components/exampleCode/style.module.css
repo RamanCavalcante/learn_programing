@@ -1,0 +1,25 @@
+.container_code {
+  background-color: #282a36;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  display: block;
+}
+
+.content {
+
+}
+
+.icon {
+  text-align: right;
+  background-color: #282a36;
+}
+
+.icon>button {
+  background-color: #282a36;
+  border: none;
+}
+
+.icon>button:hover {
+  cursor: pointer;
+  background-color: #75757c;
+}
