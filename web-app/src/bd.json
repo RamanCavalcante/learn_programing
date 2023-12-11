@@ -1,0 +1,106 @@
+{
+  "Activities": [
+    {
+      "ItemActivity": {
+        "title": "título da tarefa 1",
+        "order": 0,
+        "done": false,
+        "lessons": [
+          {
+            "QuestionType": {
+              "query": "pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ",
+              "options": [
+                {
+                  "OptionType": {
+                    "answer": "resposta resposta resposta resposta resposta ",
+                    "obs": "obs obsobsobsobs",
+                    "value": false
+                  }
+                },
+                {
+                  "OptionType": {
+                    "answer": "resposta resposta resposta resposta resposta ",
+                    "obs": "obs obsobsobsobs",
+                    "value": true
+                  }
+                },
+                {
+                  "OptionType": {
+                    "answer": "resposta resposta resposta resposta resposta ",
+                    "obs": "obs obsobsobsobs",
+                    "value": false
+                  }
+                }
+              ],
+              "selected_index": -1,
+              "typeItem": "ItemQuestion"
+            }
+          },
+          {
+            "ExampleCodeType": {
+              "content": "const test = \"Hello\"; console.log(test);",
+              "typeItem": "ItemExampleCode"
+            }
+          },
+          {
+            "LessonTextType": {
+              "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.",
+              "typeItem": "ItemText"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ItemActivity": {
+        "title": "título da tarefa 2",
+        "order": 0,
+        "done": false,
+        "lessons": [
+          {
+            "QuestionType": {
+              "query": "pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ",
+              "options": [
+                {
+                  "OptionType": {
+                    "answer": "resposta resposta resposta resposta resposta ",
+                    "obs": "obs obsobsobsobs",
+                    "value": false
+                  }
+                },
+                {
+                  "OptionType": {
+                    "answer": "resposta resposta resposta resposta resposta ",
+                    "obs": "obs obsobsobsobs",
+                    "value": true
+                  }
+                },
+                {
+                  "OptionType": {
+                    "answer": "resposta resposta resposta resposta resposta ",
+                    "obs": "obs obsobsobsobs",
+                    "value": false
+                  }
+                }
+              ],
+              "selected_index": -1,
+              "typeItem": "ItemQuestion"
+            }
+          },
+          {
+            "ExampleCodeType": {
+              "content": "const test = \"Hello\"; console.log(test);",
+              "typeItem": "ItemExampleCode"
+            }
+          },
+          {
+            "LessonTextType": {
+              "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.",
+              "typeItem": "ItemText"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

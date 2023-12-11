@@ -2,63 +2,27 @@ import React, { useState } from 'react';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import ItemLesson from './components/ItemLesson';
 import style from './style.module.css';
-import activiesJson from '../../assets/lessons.json';
+import { activitiesObj } from '../../lessons';
 import {
-  ElementType,
-  ExampleCodeType,
-  OptionType,
   QuestionType,
-  TextLessonType
+  LessonTextType,
+  ExampleCodeType,
+  ItemActivity
 } from '../../types/apps/ActivitiesTypes';
-import { Lesson } from '../../model/Lesson';
 import ItemQuestion from '../../components/question';
 import ExampleCode from '../../components/exampleCode';
 import TextLesson from '../../components/text';
 
 const ActivitiesPage = () => {
-  type ItemActivity = {
-    title: string;
-    content: Lesson;
-    order: number;
-    done: boolean;
-  };
-
-  const option: OptionType = {
-    answer: 'resposta resposta resposta resposta resposta ',
-    obs: 'obs obsobsobsobs',
-    value: false
-  };
-  const question: QuestionType = {
-    query:
-      'pergunta pergunta pergunta pergunta pergunta pergunta pergunta pergunta pergunta pergunta ',
-    options: [option, option, option],
-    selected_index: -1,
-    typeItem: ElementType.ItemQuestion
-  };
-
-  const code_example: ExampleCodeType = {
-    content: `const test = "Hello" console.log(test);`,
-    typeItem: ElementType.ItemExampleCode
-  };
-
-  const text_example: TextLessonType = {
-    content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
-    typeItem: ElementType.ItemText
-  };
-
-  const elements: Lesson = new Lesson([question, code_example, text_example]);
-
   const activities: ItemActivity[] = [];
-  activiesJson.forEach((item, order) => {
-    for (let index = 0; index < 10; index++) {
-      activities.push({
-        title: item.title,
-        content: elements,
-        order: order + 1,
-        done: item.status
-      });
-    }
+
+  activitiesObj.activities.forEach((item, order) => {
+    activities.push({
+      title: item.title,
+      lessons: item.lessons,
+      order: order + 1,
+      done: false
+    });
   });
 
   const [currentLesson, setCurrentLesson] = useState<ItemActivity>();
@@ -100,17 +64,17 @@ const ActivitiesPage = () => {
         <div className={style.container_lesson}>
           <div className={style.content_tile}>{currentLesson?.title}</div>
           <div className={style.content_block}>
-            {currentLesson?.content.listElements.map(
+            {currentLesson?.lessons.map(
               (
-                item: QuestionType | ExampleCodeType | TextLessonType,
+                item: QuestionType | ExampleCodeType | LessonTextType,
                 index: number
               ) => (
                 <div className={style.item} key={index}>
-                  {item.typeItem === ElementType.ItemQuestion ? (
+                  {item.typeItem === 'ItemQuestion' ? (
                     <ItemQuestion {...item} />
-                  ) : item.typeItem === ElementType.ItemExampleCode ? (
+                  ) : item.typeItem === 'ItemExampleCode' ? (
                     <ExampleCode {...item} />
-                  ) : item.typeItem === ElementType.ItemText ? (
+                  ) : item.typeItem === 'ItemText' ? (
                     <TextLesson {...item} />
                   ) : null}
                 </div>

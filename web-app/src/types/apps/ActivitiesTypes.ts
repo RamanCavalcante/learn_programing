@@ -1,32 +1,41 @@
-export enum ElementType {
+export enum EnumLessonType {
   ItemQuestion,
   ItemExampleCode,
   ItemText
 }
 
-export type QuestionType = {
-  typeItem: ElementType.ItemQuestion;
-  query: string;
-  options: OptionType[];
-  selected_index: number;
+export type QuestionOptionType = {
+  answer: string;
+  obs: string;
+  value: boolean;
 };
 
-export type OptionType = {
-  answer: string;
-  value: boolean;
-  obs: string;
+export type QuestionType = {
+  query: string;
+  options: QuestionOptionType[];
+  selected_index: number;
+  typeItem: 'ItemQuestion';
 };
 
 export type ExampleCodeType = {
-  typeItem: ElementType.ItemExampleCode;
   content: string;
+  typeItem: 'ItemExampleCode';
 };
 
-export type TextLessonType = {
-  typeItem: ElementType.ItemText;
+export type LessonTextType = {
   content: string;
+  typeItem: 'ItemText';
 };
 
-export type LessonType = {
-  elements: (OptionType | ExampleCodeType | TextLessonType)[];
+export type LessonType = QuestionType | ExampleCodeType | LessonTextType;
+
+export type ActivitiesDataType = {
+  activities: ItemActivity[];
+};
+
+export type ItemActivity = {
+  title: string;
+  lessons: LessonType[];
+  order: number;
+  done: boolean;
 };

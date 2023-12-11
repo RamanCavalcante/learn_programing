@@ -1,9 +1,9 @@
 import {
   ExampleCodeType,
   QuestionType,
-  TextLessonType
+  LessonTextType
 } from '../types/apps/ActivitiesTypes';
-type ElementsLesson = (QuestionType | ExampleCodeType | TextLessonType)[];
+type ElementsLesson = (QuestionType | ExampleCodeType | LessonTextType)[];
 
 export class Lesson {
   private readonly elements: ElementsLesson = [];

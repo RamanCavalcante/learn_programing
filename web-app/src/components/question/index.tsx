@@ -1,6 +1,9 @@
 import React from 'react';
 import style from './style.module.css';
-import { OptionType, QuestionType } from '../../types/apps/ActivitiesTypes';
+import {
+  QuestionOptionType,
+  QuestionType
+} from '../../types/apps/ActivitiesTypes';
 
 const ItemQuestion = (props: QuestionType) => {
   const handleClickOPtion = () => {};
@@ -10,7 +13,7 @@ const ItemQuestion = (props: QuestionType) => {
     <div className={style.question_content}>
       <div className={style.answer}>{props.query}</div>
       <div className={style.options}>
-        {props.options.map((option: OptionType, index: number) => (
+        {props.options.map((option: QuestionOptionType, index: number) => (
           <div
             key={index}
             className={style.item_option}
