@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './style.module.css';
 import {
   QuestionOptionType,
@@ -6,8 +6,21 @@ import {
 } from '../../types/apps/ActivitiesTypes';
 
 const ItemQuestion = (props: QuestionType) => {
-  const handleClickOPtion = () => {};
-  const handleClickConfirm = () => {};
+  const [currentOption, setCurrentOption] = useState<
+    QuestionOptionType | undefined
+  >();
+
+  const handleClickOPtion = (option: QuestionOptionType) => {
+    setCurrentOption(option);
+  };
+
+  const handleClickConfirm = () => {
+    if (currentOption?.value) {
+      console.log('AAAAAAAA ta certo');
+    } else {
+      console.log('AAAAAAAA ta errado');
+    }
+  };
 
   return (
     <div className={style.question_content}>
@@ -17,9 +30,14 @@ const ItemQuestion = (props: QuestionType) => {
           <div
             key={index}
             className={style.item_option}
-            onClick={handleClickOPtion}
+            onClick={() => handleClickOPtion(option)}
           >
-            <div className={style.check}></div>
+            <input
+              type="checkbox"
+              checked={currentOption == option}
+              className={style.check}
+              onChange={() => handleClickOPtion(option)}
+            ></input>
             <div>{option.answer}</div>
           </div>
         ))}
