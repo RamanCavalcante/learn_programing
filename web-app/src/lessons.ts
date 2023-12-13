@@ -614,17 +614,17 @@ export const activitiesObj: ActivitiesDataType = {
           options: [
             {
               answer: 'panda',
-              obs: 'obs obsobsobsobs',
+              obs: 'Incorreto. "panda" é uma das opções do case para "MAMÍFERO"',
               value: false
             },
             {
               answer: 'PEIXE',
-              obs: 'obs obsobsobsobs',
+              obs: 'Incorreto. "pato" não está especificado como caso para retornar "PEIXE"',
               value: false
             },
             {
               answer: 'AVE',
-              obs: 'obs obsobsobsobs',
+              obs: 'Correto! "pato" está no case para retornar "AVE"',
               value: true
             },
             {
@@ -635,133 +635,311 @@ export const activitiesObj: ActivitiesDataType = {
           ],
           selected_index: -1,
           typeItem: 'ItemQuestion'
-        },
-        // TEMPLATES
-        { // bloco de pergunta
-          query:
-            'pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ',
-          // lista de opções
-          options: [
-            {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
-              value: false
-            },
-            {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
-              value: true
-            },
-            {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
-              value: false
-            }
-          ],
-          selected_index: -1,
-          typeItem: 'ItemQuestion'
-        },
-        { // bloco de código
-          content: `const test = "Hello"; console.log(test);`,
-          typeItem: 'ItemExampleCode'
-        },
-        { // bloco de texto
-          content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
-          typeItem: 'ItemText'
         }
       ]
     },
 
     // OPERAÇÕES TERNÁRIAS
     {
-      title: 'titulo de tarefa 2',
+      title: 'OPERAÇÕES TERNÁRIAS',
       order: 0,
       done: false,
       // Lições
       lessons: [
-        {
-          // pergunta
+        { // bloco de texto
+          content:
+            'Os operadores ternários podem ser vistos como sendo uma forma mais compacta de se escrever o comando if-else. É normalmente usado em instruções return, precisa de apenas uma linha para fazer a decisão, retornando o valor à esquerda se a expressão for verdadeira e falsa se falsa.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: 
+          `// essa operação ternária
+          return 10 > 7 ? true : false;
+          
+          // é equivalente a esse if/else
+          if (10 > 7) {
+              return true;
+          } else {
+              return false;
+          }`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'Operações ternárias são usadas em cenários simples, onde precisa apenas retornar um valor baseado em uma condição, sem necessidade de operações extras. É recomendado utilizar if-else para todas outras operações, como condições aninhadas e instruções com lógicas mais complexas.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de pergunta
           query:
-            'pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ',
+            `Como a instrução if-else abaixo seria escrita em uma instrução ternária?
+
+            if (valor > max) {
+              max = valor;
+            } else {
+              max = max;
+            }`,
           // lista de opções
           options: [
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: 'valor = (valor > max) ? valor : max;',
+              obs: 'Incorreto. Note que a variável sendo modificada no código é max.',
               value: false
             },
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: 'max = (valor > max) ? max : valor;',
+              obs: 'Incorreto. Atente-se à ordem dos valores a serem retornados.',
+              value: false
+            },
+            {
+              answer: 'max = (valor > max) ? valor : max;',
+              obs: 'Correto!',
               value: true
             },
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: 'max = (valor > max) : valor ? max;',
+              obs: 'Incorreto. A ordem dos símbolos das operações ternárias está invertida.',
               value: false
             }
           ],
           selected_index: -1,
           typeItem: 'ItemQuestion'
-        },
-        {
-          // bloco de código
-          content: 'const test = "Hello"; console.log(test);',
-          typeItem: 'ItemExampleCode'
-        },
-        {
-          // bloco de texto
-          content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
-          typeItem: 'ItemText'
         }
       ]
     },
 
     // LOOPS
     {
-      title: 'titulo de tarefa 2',
+      title: 'LOOPS',
       order: 0,
       done: false,
       // Lições
       lessons: [
-        {
-          // pergunta
+        { // bloco de texto
+          content:
+            'Os loops (ou laços) em Java assumem diferentes formas para executar objetivos diferentes no código. Entre eles estão o while, do-while e o for, tendo 2 variações – for básico, onde executa instruções até uma condição ser atendida; e o for each, que utiliza um iterador para percorrer alguma coleção de elementos.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de texto
+          content:
+            'O laço while apresenta uma estrutura simples, onde o fluxo de código só se desloca para ele se uma condição for atendida, e assim que se mostra false, sai do laço:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `while (condition) {
+            // instruções
+          }`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'A operação do-while funciona de maneira semelhante, no entanto, a condição do laço é conferida apenas no final da execução da operação. Esse comportamento permite executar o código uma vez mesmo com uma condição falsa.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `do {
+            // instrução
+          } while (condition);`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de pergunta
           query:
-            'pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ',
+            `Observe o código abaixo e assinale a alternativa que apresenta a saída correta do programa:
+
+            int contador = 0;
+            while (contador < 10) {
+              System.out.print(contador + “ ”);
+              contador++;
+            }
+            
+            do {
+              System.out.println(“do-while: “ + contador);
+            } while(contador < 10);`,
           // lista de opções
           options: [
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: '1 2 3 4 5 6 7 8 9 10',
+              obs: 'Incorreto. Note que contador começa em 0 e o primeiro laço acaba antes de chegar no 10.',
               value: false
             },
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: '0 1 2 3 4 5 6 7 8 9 do-while: 10',
+              obs: 'Correto! O primeiro laço sai quando contador atinge 10 e o do while é executado uma vez e testa que contador não é menor que 10 e logo sai do segundo laço.',
               value: true
             },
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: '0 1 2 3 4 5 6 7 8 9',
+              obs: 'Incorreto. O laço do while sempre é executado ao menos uma vez.',
+              value: false
+            },
+            {
+              answer: '1 2 3 4 5 6 7 8 9 10 do-while: 11',
+              obs: 'Incorreto. O primeiro laço finaliza antes de poder imprimir contador igual a 10.',
               value: false
             }
           ],
           selected_index: -1,
           typeItem: 'ItemQuestion'
         },
-        {
-          // bloco de código
-          content: 'const test = "Hello"; console.log(test);',
+        { // bloco de texto
+          content:
+            'Os laços for apresentam uma estrutura para comportar a inicialização, teste e atualização de uma variável em um único lugar:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `for (inicializar ; testar ; atualizar) {
+            // instruções
+          }`,
           typeItem: 'ItemExampleCode'
         },
-        {
-          // bloco de texto
+        { // bloco de texto
           content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
+            'Assim, como exemplo, a operação while da atividade anterior seria traduzido para for da seguinte maneira:',
           typeItem: 'ItemText'
-        }
+        },
+        { // bloco de código
+          content: `for (int contador = 0 ; contador < 10 ; contador++) {
+            System.out.print(contador + “ ”);
+          }`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'A inicialização cria um estado inicial para o loop e é executado apenas uma vez no começo do loop. Normalmente é usada para atribuir variáveis utilizadas na seção de teste e atualização.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `int contador = 0`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'A expressão de teste verifica a condição para continuar o loop. Se avaliar a expressão como falso as instruções no corpo do comando for e a seção de atualização não são executadas:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `contador < 10`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'Depois da execução do corpo do laço, a seção de atualização é executada no fim de toda iteração do laço e geralmente é usada para incrementar a variável declarada na seção de inicialização:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `contador++`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de pergunta
+          query:
+            `Marque a alternativa que corresponda ao código correto para a saída do código abaixo:
+
+            for (...) {
+              System.out.print(i + “ ”);
+            }
+            
+            saída: 1 2 3 4 5 6 7 8 9 10`,
+          // lista de opções
+          options: [
+            {
+              answer: 'int i = 1; i <= 10; i++',
+              obs: 'Correto! Para imprimir do 1 ao 10, o laço deve incluir o 10 com o <= e i começar como 1.',
+              value: true
+            },
+            {
+              answer: 'int i = 0; i < 10; i++',
+              obs: 'Incorreto. Esse comando irá imprimir valores de 0 a 9',
+              value: false
+            },
+            {
+              answer: 'int i = 1; i < 10; i++',
+              obs: 'Incorreto. Esse comando irá imprimir valores de 1 a 9',
+              value: false
+            },
+            {
+              answer: 'int i = 0; i <= 10; i++',
+              obs: 'Incorreto. Esse comando irá imprimir valores de 0 a 10',
+              value: false
+            }
+          ],
+          selected_index: -1,
+          typeItem: 'ItemQuestion'
+        },
+        { // bloco de texto
+          content:
+            'Laços for também são muito utilizados para iterar sobre vetores, como mostrado abaixo:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `int[] array = new int[100];
+          for (int i = 0; i < array.length; i++) {
+            array[i] = i;
+          }`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'O for each é uma variação do laço for usado para executar um bloco de instruções para cada elemento em uma coleção do java (listas, sets, etc). A declaração desse tipo de laço deixa o código mais legível pois é composto por 2 partes de fácil entendimento: a declaração e a coleção, como mostrado abaixo:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `for(declaracao : colecao) {
+            // instrução
+          }`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'Um exemplo de sua aplicação:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `char[] vogais = {'a', 'e', 'i', 'o', 'u'};
+          for(Character vogal : vogais) {
+            System.out.print(vogal + “ ”);
+          }
+          
+          Saída: a e i o u`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de pergunta
+          query:
+            `Selecione o programa que imprima o nome de cada pessoa da lista de nomes abaixo:
+
+            List<String> nomes = List.of(“Amanda”, “João”, “Renata”, “Gabriel”, “Sandro”, “Rebeca”);`,
+          // lista de opções
+          options: [
+            {
+              answer: `for (List<String> nomes : nome) {
+                System.out.println(nome);
+              }`,
+              obs: 'Incorreto. A referência na parte da inicialização deve ser da variável criada para cada elemento, não para a coleção iterada.',
+              value: false
+            },
+            {
+              answer: `for (String[] nome : nomes) {
+                System.out.println(nome);
+              }`,
+              obs: 'Incorreto. O tipo da variável não condiz com o tipo de elementos na coleção.',
+              value: false
+            },
+            {
+              answer: `for (nome : String[] nomes) {
+                System.out.println(nomes[i]);
+              }`,
+              obs: 'Incorreto. O tipo da coleção e sua posição no laço estão erradas.',
+              value: false
+            },
+            {
+              answer: `for (String nome : nomes) {
+                System.out.println(nome);
+              }`,
+              obs: 'Correto! Na primeira parte define-se o tipo da variável e na segunda parte, a coleção a ser iterada.',
+              value: true
+            }
+          ],
+          selected_index: -1,
+          typeItem: 'ItemQuestion'
+        },
       ]
     },
 
@@ -892,46 +1070,169 @@ export const activitiesObj: ActivitiesDataType = {
 
     // ORIENTAÇÃO A OBJETO
     {
-      title: 'titulo de tarefa 2',
+      title: 'ORIENTAÇÃO A OBJETO',
       order: 0,
       done: false,
       // Lições
       lessons: [
-        {
-          // pergunta
+        { // bloco de texto
+          content:
+            'Com o uso de classes, o programador tem acesso à ferramenta mais poderosa do Java: orientação a objeto. Esse recurso possibilita o programador criar novas classes que se comportem de maneira semelhante sem repetir código e separar por categorias comportamentos desejados.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de texto
+          content:
+            'A programação orientada a objetos em Java (POO) é baseada em dois princípios:',
+          typeItem: 'ItemText'
+        },
+        { // bloco de texto
+          content:
+            ' • Herança: permite que uma classe receba comportamentos e atributos de uma classe herdada. É usada colocando a palavra-chave extends depois da declaração do nome da classe.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: 
+          `public class Animal {
+            int peso;
+            int numeroMembros;
+            
+            public void falar() {
+              // comportamento geral de Animal
+            }
+          }
+          
+          public class Gato extends Animal {
+            String pelagem;
+            
+            public void falar() {
+              System.out.println(“miau”);
+            }
+          }`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'Note que Gato, por herdar de Animal, recebe da classe mãe todos seus atributos e pode adicionar novos específicos para ele. O mesmo acontece com o comportamento, ou os métodos, que permite que o gato execute uma função geral em animal ou sobrescreva esse comportamento por um mais específico do seu tipo.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de pergunta
           query:
-            'pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ',
+            `Observe as classes abaixo e assinale a alternativa que mostre a saída correta:
+
+            public class Funcionario {
+              String departamento;
+              double salario = 1120.0;
+            
+              public double getSalario() {
+                return 2000.0;
+              }
+            }
+            
+            public class Gerente extends Funcionario {
+              public double getSalario() {
+                return 3500.0;
+              }
+            }
+            …
+            Funcionario f = new Gerente();
+            System.out.println(f.getSalario());`,
           // lista de opções
           options: [
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: '1120.0',
+              obs: 'Incorreto. O valor do atributo salário não é alcançado no código.',
               value: false
             },
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: '3500.0',
+              obs: 'Correto! Gerente, por herdar de Funcionárioo, pode sobrescrever um comportamento de sua classe mãe.',
               value: true
             },
             {
-              answer: 'resposta resposta resposta resposta resposta ',
-              obs: 'obs obsobsobsobs',
+              answer: '0.0',
+              obs: 'Incorreto. 0.0 É O VALOR PADRÃO DE variáveis double não inicializadas.',
+              value: false
+            }
+            ,
+            {
+              answer: '2000.0',
+              obs: 'Incorreto. Gerente sobrescreve a funcionalidade do método getSalario() vindo da classe mãe.',
               value: false
             }
           ],
           selected_index: -1,
           typeItem: 'ItemQuestion'
         },
-        {
-          // bloco de código
-          content: 'const test = "Hello"; console.log(test);',
+        { // bloco de texto
+          content:
+            ' • Polimorfismo: permite que uma classe assuma diferentes formas e comportamentos. Essa capacidade permite criar listas e operações para classes mais genéricas que afetam todos os filhos sem modificar os métodos de cada classe individualmente.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `public interface Animal {
+            // definir quais serão os comportamentos cada de Animal
+            public void comer();
+            public void dormir();
+          }
+          
+          public class Passaro implements Animal {
+            // Passaro é obrigado a implementar os métodos definidos em Animal
+          }
+          
+          public class Urso implements Animal {
+            // Urso é obrigado a implementar os métodos definidos em Animal
+          }
+          
+          Animal animal = new Passaro();
+          Animal animal = new Urso();
+          `,
           typeItem: 'ItemExampleCode'
         },
-        {
-          // bloco de texto
+        { // bloco de texto
           content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
+            'Com o uso de uma interface, é possível criar um conjunto de métodos comuns a todos animais sem definir um comportamento específico, deste modo, Animal pode executar comportamentos em comum a pássaro quanto a urso. Assim, permitindo a generalização do tipo de animal, mas especificando seu comportamento. Essa propriedade é muito útil na criação de listas de classes com diferentes tipos que compartilham uma classe mãe em comum.',
           typeItem: 'ItemText'
+        },
+        { // bloco de texto
+          content:
+            'Ao se usar uma interface, não é possível definir o corpo do método, deste modo, as classes que implementam a interface ficam responsáveis em definir o comportamento de cada método.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de pergunta
+          query:
+            `Observe a interface abaixo e assinale a alternativa que descreva o jeito correto de fazer uma classe definir seus métodos:
+
+            public interface PermitirAcessoComSenha {
+              public boolean solicitarSenha(int senha);
+              public boolean verificarId(int id);
+              public void carregarInformações();
+            }
+            `,
+          // lista de opções
+          options: [
+            {
+              answer: 'public class Gerente : PermitirAcessoComSenha { ...',
+              obs: 'Incorreto. Essa sintaxe não pertence ao Java.',
+              value: false
+            },
+            {
+              answer: 'public class PermitirAcessoComSenha implemented Gerente { ...',
+              obs: 'Incorreto. Primeiro define-se o nome da classe e depois a interface implementada.',
+              value: false
+            },
+            {
+              answer: 'public interface Gerente implements PermitirAcessoComSenha { ...',
+              obs: 'Incorreto. Note que se pretende criar uma nova classe Gerente.',
+              value: false
+            },
+            {
+              answer: 'public class Gerente implements PermitirAcessoComSenha { ...',
+              obs: 'Correto! Sintaxe válida para criação de uma classe Gerente que implementa a interface PermitirAcessoComSenha.',
+              value: true
+            }
+          ],
+          selected_index: -1,
+          typeItem: 'ItemQuestion'
         }
       ]
     },
@@ -1119,13 +1420,86 @@ export const activitiesObj: ActivitiesDataType = {
 
     // LISTAS
     {
-      title: 'titulo de tarefa 2',
+      title: 'LISTAS',
       order: 0,
       done: false,
       // Lições
       lessons: [
-        {
-          // pergunta
+        { // bloco de texto
+          content:
+            'Listas são coleções ordenadas no Java com tamanho ajustado dinamicamente - diferentemente dos arrays. Uma lista também pode acomodar elementos de diferentes tipos ou definir um tipo específico para a lista.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: 
+          `// definir uma lista genérica
+List<> lista = List.of(“Carolina”, 3, 4.7, false);
+// definir uma lista com tipo
+List<Integer> numeros = List.of(1, 3, 5, 3, 7, 6);`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'Os tipos de listas mais usados são ArrayList e LinkedList, todas filhas de uma classe genérica chamada List. É na classe List onde são definidos métodos para adicionar, remover e pesquisar elementos, por exemplo.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `List<String> nomes = new ArrayList<>();
+nomes.add(“Júlia”);
+nomes.add(“Fernando”);
+nomes.add(“Mariana”);
+nomes.add(“Verônica”);
+nomes.remove(“Fernando”);
+nomes.get(1); // retorna o elemento da segunda posição`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de texto
+          content:
+            'Com o for each é possível navegar a lista, acessando todos os seus elementos.',
+          typeItem: 'ItemText'
+        },
+        { // bloco de código
+          content: `for (String nome : nomes) {
+	System.out.println(nome);
+}`,
+          typeItem: 'ItemExampleCode'
+        },
+        { // bloco de pergunta
+          query:
+            `Suponha que há uma lista vogais que contenha ['a', 'i', 'u', 'e', 'u'], para transformá-la em ['a', 'i', 'e', 'u', 'o'] é necessário executar as seguintes linhas de código:`,
+          // lista de opções
+          options: [
+            {
+              answer: `Collections.sort(vogais)
+    vogais.add('o');`,
+              obs: `Incorreto. A sequência resultante é ['a', 'e', 'i', 'u', 'u', 'o']`,
+              value: false
+            },
+            {
+              answer: `vogais.remove('o');
+    vogais.add('u');`,
+              obs: `Incorreto. A sequência resultante é ['a', 'i', 'u', 'e', 'u', 'u']`,
+              value: false
+            },
+            {
+              answer: `vogais.remove('u');
+    vogais.remove('e');
+    vogais.add('o');`,
+              obs: `Incorreto. A sequência resultante é ['a', 'i', 'u', 'o']`,
+              value: false
+            },
+            {
+              answer: `vogais.remove('u');
+    vogais.add('o');`,
+              obs: 'Correto!',
+              value: true
+            }
+          ],
+          selected_index: -1,
+          typeItem: 'ItemQuestion'
+        },
+        // TEMPLATES
+        { // bloco de pergunta
           query:
             'pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ',
           // lista de opções
@@ -1149,13 +1523,11 @@ export const activitiesObj: ActivitiesDataType = {
           selected_index: -1,
           typeItem: 'ItemQuestion'
         },
-        {
-          // bloco de código
-          content: 'const test = "Hello"; console.log(test);',
+        { // bloco de código
+          content: `const test = "Hello"; console.log(test);`,
           typeItem: 'ItemExampleCode'
         },
-        {
-          // bloco de texto
+        { // bloco de texto
           content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
           typeItem: 'ItemText'
@@ -1165,13 +1537,13 @@ export const activitiesObj: ActivitiesDataType = {
 
     // TEMPLATE
     {
-      title: 'titulo de tarefa 2',
+      title: 'TEMPLATE',
       order: 0,
       done: false,
       // Lições
       lessons: [
-        {
-          // pergunta
+        // TEMPLATES
+        { // bloco de pergunta
           query:
             'pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 pergunta 1 ',
           // lista de opções
@@ -1195,13 +1567,11 @@ export const activitiesObj: ActivitiesDataType = {
           selected_index: -1,
           typeItem: 'ItemQuestion'
         },
-        {
-          // bloco de código
-          content: 'const test = "Hello"; console.log(test);',
+        { // bloco de código
+          content: `const test = "Hello"; console.log(test);`,
           typeItem: 'ItemExampleCode'
         },
-        {
-          // bloco de texto
+        { // bloco de texto
           content:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
           typeItem: 'ItemText'
