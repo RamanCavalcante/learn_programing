@@ -18,6 +18,15 @@
   border-radius: 50%;
 }
 
+.check_item_checked {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  background-color: #fc8c8c;
+  border-radius: 50%;
+}
+
 .name_lesson {
   color: #ffffff;
   font-weight: bolder;

@@ -39,15 +39,14 @@
 }
 
 .modal > h2 {
-  textDecoration: none;
   font-family: Rubik Mono One;
   font-style: normal;
   font-weight: 970;
   line-height: normal;
   font-size: xx-large;
   color: #282a36;
-
 }
+
 .side_image {
   width: 40%;
 }

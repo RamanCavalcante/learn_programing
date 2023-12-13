@@ -14,11 +14,11 @@
   color: #fafafa;
 }
 
-
 .container_lesson {
   padding: 2rem;
   width: 80%;
 }
+
 .side_bar {
   background-color: #14151C;
   width: 20%;
@@ -29,9 +29,16 @@
   max-height: 90%;
 }
 
+.content_title {
+  font-size: 25px;
+  font-weight: 999;
+  color: #c84997;
+}
+
 .item {
   margin-top: 15px;
 }
+
 .top_side_bar {
   color: #ffffff;
   display: flex;
@@ -42,3 +49,33 @@
   max-height: 10%;
 }
 
+.currentLesson>:hover {
+  cursor: pointer;
+  background-color: #27282f;
+}
+
+.currentLessonSelected {
+  background-color: #5e70fc;
+}
+
+.buttons_change_lesson{
+  text-align: right;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.buttons_change_lesson>button {
+  background-color: #4cad4c;
+  color: #ffff;
+  padding: 15px 32px;
+  width: 150px;
+  font-weight: bolder;
+  border: none;
+}
+
+.buttons_change_lesson>button:hover {
+  cursor: pointer;
+  background-color: #61aa61;
+}

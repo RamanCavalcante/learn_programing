@@ -187,7 +187,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de texto
@@ -239,11 +240,163 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         }
       ]
     },
-
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    // CLASSES
+    {
+      title: 'CLASSES',
+      order: 0,
+      done: false,
+      // Lições
+      lessons: [
+        {
+          // bloco de texto
+          content:
+            'O princípio da orientação a objetos em Java é a classe, que é uma combinação de dados e comportamento (métodos). Os campos e métodos de uma classe são conhecidos como seus membros.\nO acesso aos membros pode ser controlado por modificadores de acesso, sendo os dois mais comuns:\npublic: o membro pode ser acessado por qualquer código (sem restrições).\nprivate: o membro só pode ser acessado por código na mesma classe.\nVocê pode pensar em uma classe como um modelo para criar instâncias dessa classe. Para criar uma instância de uma classe (também conhecida como objeto), é utilizado a palavra-chave new:',
+          typeItem: 'ItemText'
+        },
+        {
+          // pergunta
+          query:
+            'Na programação orientada a objetos em Java, qual é a finalidade dos modificadores de acesso em relação aos membros de uma classe?',
+          // lista de opções
+          options: [
+            {
+              answer: 'Controlar a criação de objetos',
+              obs: 'normalmente exercido através do uso de construtores',
+              value: false
+            },
+            {
+              answer: 'Determinar a instância da classe',
+              obs: 'um objeto é criado a partir de uma classe em Java usando a palavra-chave new',
+              value: false
+            },
+            {
+              answer: 'Gerenciar a visibilidade dos membros da classe',
+              obs: 'O gerenciamento da visibilidade dos membros da classe (como variáveis, métodos, construtores) é alcançado através do uso de modificadores de acesso (public, private, protected e padrão)',
+              value: true
+            },
+            {
+              answer: 'Definir o comportamento dos métodos',
+              obs: 'Os métodos em uma classe Java representam comportamentos ou ações que um objeto dessa classe pode realizar',
+              value: false
+            }
+          ],
+          selected_index: -1,
+          typeItem: 'ItemQuestion'
+        },
+        {
+          // bloco de código
+          content: 'class Barco {\n}\n// Criar duas instâncias de barco\nBarco meuBarco = new Barco();\nBarco seuBarco = new Barco();',
+          typeItem: 'ItemExampleCode'
+        },
+        {
+          // bloco de texto
+          content:
+            'Os campos têm um tipo e um nome (definido em camelCase) e podem ser definidos em qualquer lugar em uma classe (por convenção, em PascalCase):',
+          typeItem: 'ItemText'
+        },
+        {
+          // bloco de código
+          content: 'class Barco {\n// Acessível por qualquer um\npublic int peso;\n\n// Apenas acessível pelo código nesta classe\nprivate String cor;\n}',
+          typeItem: 'ItemExampleCode'
+        },
+        {
+          // bloco de texto
+          content:
+            'Opcionalmente, pode-se atribuir um valor inicial a um campo. Se um campo não especificar um valor inicial, ele será definido para o valor padrão de seu tipo. Os valores dos campos de uma instância podem ser acessados e atualizados usando a notação de ponto.',
+          typeItem: 'ItemText'
+        },
+        {
+          // bloco de código
+          content: 'class Barco {\n// A variável ficará com o valor especificado (1500)\npublic int peso = 1500;\n\n// Será definido para o valor padrão (0)\npublic int ano;\n}\n\nBarco novoBarco = new Barco();\nnovoBarco.peso;                           // => 1500\nnovoBarco.ano; // Valor padrão => 0\n\n// Atualizar o valor do campo\nnovoBarco.ano = 2018;    // Atualiza valor do campo para 2018',
+          typeItem: 'ItemExampleCode'
+        },
+        {
+          // bloco de texto
+          content:
+            'Normalmente, os campos privados são atualizados como um efeito colateral da chamada de um método. Tais métodos geralmente não retornam nenhum valor, nesse caso, o tipo de retorno deve ser void:',
+          typeItem: 'ItemText'
+        },
+        {
+          // bloco de código
+          content: 'class ImportadorDeBarco {\n private int barcosImportados;\n   public void importarBarcos(int numeroDeBarcos)\n    {\n     // Atualizar um campo privado usando do método público\n     barcosImportados = barcosImportados + numeroDeBarcos;\n    }\n   }',
+          typeItem: 'ItemExampleCode'
+        },
+        {
+          // pergunta
+          query:
+            'Qual é a palavra-chave utilizada em Java para criar uma instância de uma classe, também conhecida como um objeto?',
+          // lista de opções
+          options: [
+            {
+              answer: 'build',
+              obs: 'compilação de código fonte',
+              value: false
+            },
+            {
+              answer: 'create',
+              obs: 'processo de instanciar objetos',
+              value: false
+            },
+            {
+              answer: 'new',
+              obs: 'palavra-chave usada para alocar memória e criar uma instância da classe',
+              value: true
+            },
+            {
+              answer: 'instance',
+              obs: 'objeto específico criado a partir de uma classe',
+              value: false
+            }
+          ],
+          selected_index: -1,
+          typeItem: 'ItemQuestion'
+        },
+        {
+          // bloco de código
+          content: 'const test = "Hello"; console.log(test);',
+          typeItem: 'ItemExampleCode'
+        },
+        {
+          // bloco de texto
+          content:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
+          typeItem: 'ItemText'
+        }
+      ]
+    },
+     //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------
     // IF-ELSE
     {
       title: 'IF-ELSE',
@@ -285,7 +438,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de texto
@@ -342,7 +496,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de texto
@@ -421,7 +576,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // pergunta
@@ -451,14 +607,15 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         }
       ]
     },
 
     // SWITCH
     {
-      title: 'SWITCH',
+      title: 'ARRAYs',
       order: 0,
       done: false,
       // Lições
@@ -551,7 +708,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         { // bloco de texto
           content:
@@ -757,8 +915,8 @@ export const activitiesObj: ActivitiesDataType = {
           // lista de opções
           options: [
             {
-              answer: '1 2 3 4 5 6 7 8 9 10',
-              obs: 'Incorreto. Note que contador começa em 0 e o primeiro laço acaba antes de chegar no 10.',
+              answer: ' ArrayOutOfBoundsException',
+              obs: 'Não é uma exceção válida em Java. A exceção correta é "ArrayIndexOutOfBoundsException", que ocorre quando se tenta acessar um índice inválido em um array.',
               value: false
             },
             {
@@ -778,7 +936,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         { // bloco de texto
           content:
@@ -1366,7 +1525,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de código
@@ -1522,22 +1682,11 @@ nomes.get(1); // retorna o elemento da segunda posição`,
           ],
           selected_index: -1,
           typeItem: 'ItemQuestion'
-        },
-        { // bloco de código
-          content: `const test = "Hello"; console.log(test);`,
-          typeItem: 'ItemExampleCode'
-        },
-        { // bloco de texto
-          content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ex neque corrupti, in quasi corporis libero magni mollitia distinctio repellendus atque deleniti iusto molestias sint cum laboriosam, perferendis fugiat ea.',
-          typeItem: 'ItemText'
         }
       ]
     },
-
-    // TEMPLATE
     {
-      title: 'TEMPLATE',
+      title: 'titulo de tarefa 2',
       order: 0,
       done: false,
       // Lições
@@ -1565,7 +1714,8 @@ nomes.get(1); // retorna o elemento da segunda posição`,
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         { // bloco de código
           content: `const test = "Hello"; console.log(test);`,
