@@ -14,6 +14,7 @@ export type QuestionType = {
   query: string;
   options: QuestionOptionType[];
   selected_index: number;
+  correct: boolean;
   typeItem: 'ItemQuestion';
 };
 

@@ -201,7 +201,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de texto
@@ -253,7 +254,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         }
       ]
     },
@@ -312,7 +314,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de código
@@ -380,7 +383,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de código
@@ -450,7 +454,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de texto
@@ -507,7 +512,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de texto
@@ -586,7 +592,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // pergunta
@@ -616,7 +623,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         }
       ]
     },
@@ -636,7 +644,7 @@ export const activitiesObj: ActivitiesDataType = {
     //------------------------------------------------------------------------------------------------
     // ARRAY-VETOR
     {
-      title: 'ARRAYs',
+      title: 'ARRAYS',
       order: 0,
       done: false,
       // Lições
@@ -675,7 +683,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de código
@@ -744,7 +753,7 @@ export const activitiesObj: ActivitiesDataType = {
             {
               answer: ' ArrayOutOfBoundsException',
               obs: 'Não é uma exceção válida em Java. A exceção correta é "ArrayIndexOutOfBoundsException", que ocorre quando se tenta acessar um índice inválido em um array.',
-              value: false
+              value: false,
             },
             {
               answer: 'IndexOutOfBoundException',
@@ -763,7 +772,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de código
@@ -997,7 +1007,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de texto
@@ -1049,7 +1060,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         }
       ]
     },
@@ -1082,7 +1094,8 @@ export const activitiesObj: ActivitiesDataType = {
             }
           ],
           selected_index: -1,
-          typeItem: 'ItemQuestion'
+          typeItem: 'ItemQuestion',
+          correct: false
         },
         {
           // bloco de código
